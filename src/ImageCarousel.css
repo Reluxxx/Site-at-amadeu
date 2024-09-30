@@ -1,0 +1,84 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 5px; /* Espaço lateral */
+  transition: opacity 0.5s ease-in-out; /* Suave transição */
+  border-radius: 5px;
+}
+
+.carousel-image.active {
+  opacity: 1; 
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Opacidade aumentada */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Mais escuro ao passar o mouse */
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .carousel-button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Optional: Add indicators for current slide */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicator {
+  width: 12px; /* Aumentado */
+  height: 12px; /* Aumentado */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7); /* Mais visível */
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: white; /* Indicador ativo */
+}
